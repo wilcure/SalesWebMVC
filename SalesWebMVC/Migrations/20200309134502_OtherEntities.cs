@@ -32,7 +32,7 @@ namespace SalesWebMVC.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "SellerRecord",
+                name: "SalesRecord",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -60,14 +60,14 @@ namespace SalesWebMVC.Migrations
 
             migrationBuilder.CreateIndex(
                 name: "IX_SellerRecord_SellerId",
-                table: "SellerRecord",
+                table: "SalesRecord",
                 column: "SellerId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "SellerRecord");
+                name: "SalesRecord");
 
             migrationBuilder.DropTable(
                 name: "Seller");
